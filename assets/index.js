@@ -1,14 +1,16 @@
-const signinbtn = document.querySelector('.signinbtn')
-const signupbtn = document.querySelector('.signupbtn')
-const formbox = document.querySelector('.form-box')
-const body = document.querySelector('body')
+const signinBtn = document.querySelector('.signinbtn');
+const signupBtn = document.querySelector('.signupbtn');
+const formBox = document.querySelector('.form-box');
+const body = document.body;
 
-signupbtn.onclick = function() {
-    formbox.classList.add('active')
-    body.classList.add('active')
-}
+if (signinBtn && signupBtn && formBox && body) {
+  signupBtn.addEventListener('click', function() {
+    formBox.classList.add('active');
+    body.classList.add('active');
+  });
 
-signinbtn.onclick = function() {
-    formbox.classList.remove('active')
-    body.classList.remove('active')
+  signinBtn.addEventListener('click', function() {
+    formBox.classList.remove('active');
+    body.classList.remove('active');
+  });
 }
